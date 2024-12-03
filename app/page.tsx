@@ -14,13 +14,12 @@ import SparklingBackground from "@/components/SparklingBackground";
 import Image from "next/image"; // Import for handling images
 
 export default function Page() {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("🏡 home");
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
       <SparklingBackground />
-      <div className="absolute inset-0 bg-[url('/sparkles.svg')] opacity-50"></div>
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className=" px-[30px] sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,8 +36,10 @@ export default function Page() {
               height={40}
               className="rounded-full mr-4"
             />
+            <span className="text-3xl">👋</span>
+
             <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-red-800">
-              Sagar Puniyani
+              , I&apos;m Sagar Puniyani
             </h1>
           </div>
 
@@ -89,12 +90,12 @@ export default function Page() {
           transition={{ duration: 0.3 }}
           className="mt-8"
         >
-          {activeTab === "home" && <Home />}
-          {activeTab === "experience" && <Experience />}
-          {activeTab === "projects" && <Projects />}
-          {activeTab === "education" && <Education />}
-          {activeTab === "certificates" && <Certificates />}
-          {activeTab === "contact" && <Contact />}
+          {activeTab === "🏡 home" && <Home />}
+          {activeTab === "👨‍🏫 experience" && <Experience />}
+          {activeTab === "🖥️ projects" && <Projects />}
+          {activeTab === "👨‍🎓 education" && <Education />}
+          {activeTab === "📜 certificates" && <Certificates />}
+          {activeTab === "📱 contact" && <Contact />}
         </motion.main>
       </div>
     </div>
