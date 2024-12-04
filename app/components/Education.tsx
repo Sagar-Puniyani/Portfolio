@@ -3,16 +3,16 @@ import { motion } from 'framer-motion'
 const Education = () => {
   const educationData = [
     {
-      degree: 'Master of Science in Computer Science',
-      school: 'Stanford University',
-      period: '2013 - 2015',
+      degree: 'Bachelor of Science in Computer Science - IIoT',
+      school: 'GGSIPU',
+      period: '2021 - Present',
       details: 'Specialized in Machine Learning and Artificial Intelligence',
     },
     {
-      degree: 'Bachelor of Science in Computer Engineering',
-      school: 'MIT',
-      period: '2009 - 2013',
-      details: 'Minor in Mathematics',
+      degree: 'CBSE - 12th Higher Secondary',
+      school: 'KVS secondary school',
+      period: '2019 - 2020',
+      details: 'Domain in Physics, Chemistry, and Mathematics',
     },
   ]
 

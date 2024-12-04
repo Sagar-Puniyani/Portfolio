@@ -22,6 +22,16 @@ const Experience = () => {
         'Optimized application performance and reduced load times',
       ],
     },
+    {
+      title: 'Junior Developer',
+      company: 'StartUp Inc',
+      period: '2015 - 2018',
+      responsibilities: [
+        'Developed and maintained React-based web applications',
+        'Collaborated with UX designers to implement responsive designs',
+        'Optimized application performance and reduced load times',
+      ],
+    },
   ]
 
   return (

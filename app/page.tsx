@@ -2,24 +2,32 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
-import { Button } from "@/components/ui/button";
 import SparklingBackground from "@/components/SparklingBackground";
 import Image from "next/image"; // Import for handling images
+import { FaBars, FaTimes } from "react-icons/fa"; // Icons for hamburger menu
+import { Button } from "@/components/ui/button"; // Resume button styling
+import Footer from "./components/Footer";
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState("🏡 home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    setMenuOpen(false); // Close dropdown on tab selection
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
       <SparklingBackground />
-      <div className=" px-[30px] sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 relative z-10">
+
+      <div className="px-6 sm:px-8 lg:px-12 py-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,7 +36,6 @@ export default function Page() {
         >
           {/* Developer Info Section */}
           <div className="flex items-center">
-            {/* Add Developer Image */}
             <Image
               src="/sagarImg.jpeg"
               alt="Developer Image"
@@ -36,10 +43,8 @@ export default function Page() {
               height={40}
               className="rounded-full mr-4"
             />
-            <span className="text-3xl">👋</span>
-
             <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-red-800">
-              , I&apos;m Sagar Puniyani
+              👋 I&apos;m Sagar Puniyani
             </h1>
           </div>
 
@@ -50,17 +55,11 @@ export default function Page() {
               href="https://github.com/sagar-puniyani"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 m-4 rounded-full bg-black text-white text-sm shadow-md hover:shadow-lg border border-gray-700 relative overflow-hidden"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm shadow-md hover:shadow-lg border border-gray-700 relative overflow-hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              {/* Gradient Border Effect */}
-              <span
-                className="absolute inset-0  rounded-full bg-gradient-to-r from-blue-400 via-gray-800 to-gray-900 opacity-40 pointer-events-none"
-                aria-hidden="true"
-              ></span>
-
-              {/* GitHub Icon */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-gray-800 to-gray-900 opacity-40 pointer-events-none" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -69,9 +68,7 @@ export default function Page() {
               >
                 <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-1.8c-3.3.7-4-1.6-4-1.6-.5-1.2-1.3-1.5-1.3-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 2 .7 2.6.1.1-.7.4-1.1.7-1.3-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.3-3.2-.2-.3-.6-1.7.1-3.4 0 0 1-.3 3.4 1.3a12 12 0 0 1 6.2 0c2.3-1.6 3.4-1.3 3.4-1.3.7 1.7.3 3.1.1 3.4.8.8 1.3 1.9 1.3 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8.9.8 1.8v2.7c0 .3.2.6.8.5A12 12 0 0 0 12 0z" />
               </svg>
-
-              {/* Button Text */}
-              <span className="text-xl font-bold" >GitHub</span>
+              <span className="text-xl font-bold">GitHub</span>
             </motion.a>
 
             {/* Resume Download Button */}
@@ -81,14 +78,75 @@ export default function Page() {
               </a>
             </Button>
           </div>
+
+          {/* Hamburger for Mobile Screens */}
+          <div className="block md:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-2xl focus:outline-none"
+            >
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </motion.div>
-        <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+
+        {/* Navbar for Desktop Screens */}
+        <nav className="hidden md:flex gap-6 text-lg">
+          {[
+            "🏡 home",
+            "👨‍🏫 experience",
+            "🖥️ projects",
+            "👨‍🎓 education",
+            "📜 certificates",
+            "📱 contact",
+          ].map((tab) => (
+            <span
+              key={tab}
+              onClick={() => handleTabChange(tab)}
+              className={`cursor-pointer ${
+                activeTab === tab ? "text-teal-400 font-bold" : ""
+              }`}
+            >
+              {tab}
+            </span>
+          ))}
+        </nav>
+
+        {/* Dropdown Menu for Mobile Screens */}
+        {menuOpen && (
+          <motion.div
+            className="bg-gray-800 bg-opacity-80 rounded-lg p-4 z-20 absolute top-20 left-0 w-full md:hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ul className="space-y-4">
+              {[
+                "🏡 home",
+                "👨‍🏫 experience",
+                "🖥️ projects",
+                "👨‍🎓 education",
+                "📜 certificates",
+                "📱 contact",
+              ].map((tab) => (
+                <li
+                  key={tab}
+                  onClick={() => handleTabChange(tab)}
+                  className="cursor-pointer"
+                >
+                  {tab}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+
         <motion.main
           key={activeTab}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="mt-8"
+          className="mt-8 mb-8"
         >
           {activeTab === "🏡 home" && <Home />}
           {activeTab === "👨‍🏫 experience" && <Experience />}
@@ -97,6 +155,11 @@ export default function Page() {
           {activeTab === "📜 certificates" && <Certificates />}
           {activeTab === "📱 contact" && <Contact />}
         </motion.main>
+      </div>
+
+      {/* Footer Component */}
+      <div className="absolute bottom-0 w-full z-10  pt-6">
+        <Footer />
       </div>
     </div>
   );
