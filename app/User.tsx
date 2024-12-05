@@ -49,13 +49,14 @@ const mernProjects: Project[] = [
     description: "A full-stack web application built with React, TypeScript, and Node.js. Features include authentication, real-time updates, and responsive design.",
     imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
     tags: ["React", "TypeScript", "Node.js", "Tailwind"],
-    link: "https://chitran.vercel.app/"
+    link: "https://chitran.vercel.app/",
+    github: "https://github.com/Sagar-Puniyani/Chitran"
   },
   {
     title: "True Feedback Message Hub",
     description: "A scalable e-commerce solution with advanced features like real-time inventory, payment processing, and analytics dashboard.",
     imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80",
-    tags: ["Next.js", "MongoDB", "Stripe", "Redux"],
+    tags: ["Next.js","oAuth", "MongoDB", "Stripe", "Redux"],
     link: "https://devtruefeedbackmessagehub.vercel.app/"
   },
   {

@@ -3,5 +3,6 @@ export interface Project {
     description: string;
     imageUrl: string;
     tags: string[];
+    github?: string;
     link?: string;
   }

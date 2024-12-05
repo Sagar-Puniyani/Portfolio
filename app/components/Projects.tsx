@@ -22,7 +22,7 @@ const Projects = () => {
           MERN Stack Projects
         </h2>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2 }}
@@ -38,13 +38,13 @@ const Projects = () => {
           Machine Learning Projects
         </h2>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2, delayChildren: 0.3 }}
         >
           {mernProjects.map((project, index) => (
-            <ProjectCard key={index} project={{...project}} />
+            <ProjectCard key={index} project={{ ...project }} />
           ))}
         </motion.div>
       </div>
