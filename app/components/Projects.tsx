@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { mernProjects } from '../User';
+import { deepLearningProjects, mernProjects } from '../User';
 import { ProjectCard } from '@/components/ProjectCard';
 
 const Projects = () => {
@@ -35,7 +35,7 @@ const Projects = () => {
 
       <div>
         <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-          Machine Learning Projects
+          Deep Learning Projects
         </h2>
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -43,7 +43,7 @@ const Projects = () => {
           animate={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2, delayChildren: 0.3 }}
         >
-          {mernProjects.map((project, index) => (
+          {deepLearningProjects.map((project, index) => (
             <ProjectCard key={index} project={{ ...project }} />
           ))}
         </motion.div>

@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Developer',
-      company: 'Tech Corp',
-      period: '2018 - Present',
+      title: 'Data Science Intern',
+      company: 'Ybi Foundation',
+      period: 'july 2024 - sept 2024',
       responsibilities: [
         'Led development of multiple MERN stack projects',
         'Implemented machine learning algorithms for data analysis',
@@ -13,9 +13,9 @@ const Experience = () => {
       ],
     },
     {
-      title: 'Junior Developer',
-      company: 'StartUp Inc',
-      period: '2015 - 2018',
+      title: 'Research Assistant',
+      company: 'GGSIPU',
+      period: 'oct 2023 - April 2024',
       responsibilities: [
         'Developed and maintained React-based web applications',
         'Collaborated with UX designers to implement responsive designs',
@@ -23,9 +23,9 @@ const Experience = () => {
       ],
     },
     {
-      title: 'Junior Developer',
-      company: 'StartUp Inc',
-      period: '2015 - 2018',
+      title: 'MERN Developer Intern', 
+      company: 'BrainMentors Pvt. Ltd.',
+      period: 'Aug 2023 - sep 2023',
       responsibilities: [
         'Developed and maintained React-based web applications',
         'Collaborated with UX designers to implement responsive designs',

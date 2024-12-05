@@ -1,9 +1,24 @@
-import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
-import { Img } from 'react-image';
-import { Project } from '@/Types/project';
-import { FaReact, FaNodeJs, FaPython, FaDatabase } from 'react-icons/fa'; // Example icons
-import {  SiGoogleauthenticator, SiMongodb, SiTailwindcss, SiTypescript } from 'react-icons/si'; // Additional icons
+import React from "react";
+import { ExternalLink, Github } from "lucide-react";
+import { Img } from "react-image";
+import { Project } from "@/Types/project";
+import { FaReact, FaNodeJs, FaDatabase, FaNpm } from "react-icons/fa"; // Example icons
+import {
+  SiExpress,
+  SiMongodb,
+  SiShadcnui,
+  SiTailwindcss,
+  SiTypescript,
+  SiZod,
+} from "react-icons/si"; // Additional icons
+import { DiJavascript1 } from "react-icons/di";
+import { TbBrandNextjs, TbBrandOauth, TbMailCode } from "react-icons/tb";
+import { CgMenuMotion } from "react-icons/cg";
+import { MdViewComfy } from "react-icons/md";
+import { VscAzureDevops, VscVscodeInsiders } from "react-icons/vsc";
+import { FaCss3Alt } from "react-icons/fa6";
+import { GiInsectJaws } from "react-icons/gi";
+import {PythonIcon , HuggingFaceIcon} from "./ui/Icons";
 
 interface ProjectCardProps {
   project: Project;
@@ -14,11 +29,26 @@ const tagIcons: Record<string, React.ReactNode> = {
   React: <FaReact className="text-blue-400" />,
   NodeJS: <FaNodeJs className="text-green-500" />,
   MongoDB: <SiMongodb className="text-green-400" />,
-  Python: <FaPython className="text-yellow-400" />,
+  Python: <PythonIcon/>,
   Database: <FaDatabase className="text-purple-500" />,
   Tailwind: <SiTailwindcss className="text-teal-400" />,
+  Javascript: <DiJavascript1 className="text-yellow-400" />,
   TypeScript: <SiTypescript className="text-blue-800" />,
-  oAuth: <SiGoogleauthenticator className="text-gray-500" />,
+  oAuth: <TbBrandOauth className="text-red-500" />,
+  NodeJs: <FaNodeJs className="text-green-500" />,
+  NextJs: <TbBrandNextjs className="bg-white text-black" />,
+  zod: <SiZod className="text-blue-800" />,
+  nodemailer : <TbMailCode className="text-green-500" />,
+  shadcnUI: <SiShadcnui className="bg-black rounded-full p-0.5"/>,
+  "farmer-motion": <CgMenuMotion className="text-gray-900 bg-yellow-400" />,
+  Express: <SiExpress className="bg-black text-white rounded-full p-0.5"/>,
+  MVC: <MdViewComfy className="text-white bg-black" />,
+  npm: <FaNpm className="bg-red-700 text-white"/>,
+  Azure: <VscAzureDevops className="bg-white text-blue-700" />,
+  CSS: <FaCss3Alt className="text-blue-500 bg-white rounded-full" />,
+  Vsce: <VscVscodeInsiders className=" text-blue-500" />,
+  CoackroachDB: <GiInsectJaws className="text-purple-800 bg-white" />,
+  HuggingFace : <HuggingFaceIcon />
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
@@ -58,9 +88,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <h3 className="text-xl font-semibold text-gray-100 mb-2 group-hover:text-blue-400 transition-colors duration-300">
           {project.title}
         </h3>
-        <p className="text-gray-400 mb-4 line-clamp-2">
-          {project.description}
-        </p>
+        <p className="text-gray-400 mb-4">{project.description}</p>
 
         {/* Tags Container */}
         <div className="flex flex-wrap gap-2">
@@ -69,7 +97,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               key={tag}
               className="flex items-center gap-2 px-3 py-1 bg-gray-800 rounded-full text-gray-100 text-lg"
             >
-              {tagIcons[tag] || <span className="text-gray-400">?</span>} {/* Show icon or fallback */}
+              {tagIcons[tag] || <span className="text-gray-400">?</span>}{" "}
+              {/* Show icon or fallback */}
               {tag}
             </div>
           ))}

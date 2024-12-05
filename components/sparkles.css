@@ -10,13 +10,13 @@
   
   .sparkle {
     position: absolute;
-    background: yellow;
+    background: rgb(224, 224, 206);
     clip-path: polygon(
       50% 0%, 60% 40%, 100% 50%, 60% 60%, 
       50% 100%, 40% 60%, 0% 50%, 40% 40%
     ); /* Four-arm star shape */
     animation: sparkle-animation 2s ease-out forwards;
-    box-shadow: 0 0 10px yellow, 0 0 20px yellow;
+    box-shadow: 0 0 10px rgb(201, 131, 47), 0 0 20px rgb(183, 132, 108);
   }
   
   @keyframes sparkle-animation {
