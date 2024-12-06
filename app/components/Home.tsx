@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import IconCloud from "@/components/ui/icon-cloud";
 import { techSlugs } from "../User";
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -26,7 +27,11 @@ const Home = () => {
           Building sleek and effective digital experiences
         </h2>
         <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-          I am a highly motivated and enthusiastic developer with expertise in MERN Stack, Data Science, and Deep Learning. My skills span a diverse tech stack including frontend, backend, cloud solutions, and AI/ML tools. I am passionate about building scalable, robust applications that make a difference.
+          I am a highly motivated and enthusiastic developer with expertise in
+          MERN Stack, Data Science, and Deep Learning. My skills span a diverse
+          tech stack including frontend, backend, cloud solutions, and AI/ML
+          tools. I am passionate about building scalable, robust applications
+          that make a difference.
         </p>
         <ul className="text-sm md:text-base space-y-1">
           <li>⚡ MERN Stack Development</li>
@@ -34,6 +39,48 @@ const Home = () => {
           <li>⚡ Cloud Platforms: AWS, Azure, Vercel, etc</li>
           <li>⚡ DevOps and Containerization: Docker, Redis</li>
         </ul>
+        <div className="text-lg md:text-base text-gray-300 ">
+          Do visit Project Section. 🧐
+        </div>
+
+       {/* Social Links Section */}
+       <div className="flex flex-wrap justify-center md:justify-start space-x-4">
+          <a
+            href="https://linkedin.com/in/sagar-puniyani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaLinkedin size={20} />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://twitter.com/sagarpuniyani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-blue-400 hover:bg-blue-500 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaTwitter size={20} />
+            <span>Twitter</span>
+          </a>
+          <a
+            href="https://github.com/sagar-puniyani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaGithub size={20} />
+            <span>GitHub</span>
+          </a>
+          <a
+            href="mailto:sagarpuniyani@gmail.com"
+            onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=sagarpuniyani@gmail.com', '_blank')}
+            className="flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaEnvelope size={20} />
+            <span>Gmail</span>
+          </a>
+        </div>
       </motion.div>
     </motion.div>
   );

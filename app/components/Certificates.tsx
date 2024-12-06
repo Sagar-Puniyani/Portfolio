@@ -1,44 +1,33 @@
-import { motion } from 'framer-motion'
-import { Button } from "@/components/ui/button"
-
-const Certificates = () => {
-  const certificates = [
-    { title: 'AWS Certified Solutions Architect', link: '/certificates/aws-solutions-architect.pdf' },
-    { title: 'Google Cloud Professional Data Engineer', link: '/certificates/google-cloud-data-engineer.pdf' },
-    { title: 'TensorFlow Developer Certificate', link: '/certificates/tensorflow-developer.pdf' },
-    { title: 'MongoDB Certified Developer', link: '/certificates/mongodb-developer.pdf' },
-  ]
-
+import { motion } from 'framer-motion';
+import { certificates } from '@/app/User';
+import { CertificateCard } from '@/components/CertificateCard';
+export default function Certificates() {
   return (
-    <div className="space-y-8">
-      <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-600">
-        Certifications
-      </h2>
+    <section className="py-12 px-4 md:px-6 lg:px-8">
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ staggerChildren: 0.1 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-7xl mx-auto space-y-8"
       >
-        {certificates.map((cert, index) => (
-          <motion.div
-            key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <h3 className="text-xl font-semibold mb-4">{cert.title}</h3>
-            <Button variant="default" asChild>
-              <a href={cert.link} download>
-                Download Certificate
-              </a>
-            </Button>
-          </motion.div>
-        ))}
+        <div className="space-y-4 text-center">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-600">
+            Professional Certifications
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            A collection of professional certifications and achievements in cloud computing, data engineering, and software development.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {certificates.map((certificate, index) => (
+            <CertificateCard
+              key={certificate.id}
+              certificate={certificate}
+              index={index}
+            />
+          ))}
+        </div>
       </motion.div>
-    </div>
-  )
+    </section>
+  );
 }
-
-export default Certificates
-

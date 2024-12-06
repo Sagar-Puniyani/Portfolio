@@ -1,3 +1,5 @@
+import { Certificate } from "@/Types/certificate";
+import { ExperienceItem } from "@/Types/experience";
 import { Project } from "@/Types/project";
 
 const techSlugs = [
@@ -130,7 +132,7 @@ const deepLearningProjects: Project[] = [
   {
     title: "Acute Lymphoblastic Leukemia Detection",
     description:
-      "Model build to detect Acute Lymphoblastic Leukemia by Image user uploads and show the result of 3 top most classes accoding to confidence level.",
+      "Model build to detect Acute Lymphoblastic Leukemia (ALL) by Image user uploads and show the result of 3 top most classes accoding to confidence level (there are Four Categories of ALL are as follows - Benign, Early, Pre and Pro).",
     imageUrl:
       "https://res.cloudinary.com/dizsgelec/image/upload/v1733384692/share/axka5iyxcymgrj2bm6qy.png",
     tags: ["Python" , "HuggingFace"],
@@ -139,4 +141,79 @@ const deepLearningProjects: Project[] = [
   },
 ];
 
-export { techSlugs, mernProjects, deepLearningProjects };
+
+
+const experienceData: ExperienceItem[] = [
+  {
+    image: 'https://res.cloudinary.com/dizsgelec/image/upload/w_100,h_100/v1733473380/share/kdjoqmzffnp4yz8iepgz.jpg',
+    title: 'Data Science Intern',
+    company: 'Ybi Foundation',
+    period: 'july 2024 - sept 2024',
+    responsibilities: [
+      'Led development of multiple MERN stack projects',
+      'Implemented machine learning algorithms for data analysis',
+      'Mentored junior developers and conducted code reviews',
+    ],
+  },
+  {
+  image: 'https://res.cloudinary.com/dizsgelec/image/upload/w_100,h_100/v1733473380/share/hffqogiyhuy1zwxqc764.jpg',
+    title: 'Research Assistant',
+    company: 'GGSIPU',
+    period: 'oct 2023 - April 2024',
+    responsibilities: [
+      'Developed and maintained React-based web applications',
+      'Collaborated with UX designers to implement responsive designs',
+      'Optimized application performance and reduced load times',
+    ],
+  },
+  {
+    image: "https://res.cloudinary.com/dizsgelec/image/upload/w_100,h_100/v1733473380/share/fdngkx8avc2gmk63qcnd.jpg",
+    title: 'MERN Developer Intern',
+    company: 'BrainMentors Pvt. Ltd.',
+    period: 'Aug 2023 - sep 2023',
+    responsibilities: [
+      'Developed and maintained React-based web applications',
+      'Collaborated with UX designers to implement responsive designs',
+      'Optimized application performance and reduced load times',
+    ],
+  },
+];
+
+
+
+export const certificates: Certificate[] = [
+  {
+    id: 'research-ml',
+    title: 'Internation Conference on Innovative Computing and Communication (ICICC)',
+    issuer: '7th ICICC',
+    issueDate: '16 Feb 2024',
+    image: '/ICICC.png',
+    downloadUrl: '/ICICC_2024.pdf'
+  },
+  {
+    id: 'mern-dev',
+    title: 'MERN Developer Internship Certificate',
+    issuer: 'BrainMentors Pvt. Ltd.',
+    issueDate: 'July 2023 - Aug 2023',
+    image: '/mern_certificate.png',
+    downloadUrl: '/Mern_certificate.pdf'
+  },
+  {
+    id: 'bits-hackathon',
+    title: 'BITS Pilani Postman API Hackathon 3.0',
+    issuer: 'BITS Pilani Postman API and Coding Innovation Lab',
+    issueDate: '1 Sep 2023 - 5 Nov 2023',
+    image: '/BITS_API.png',
+    downloadUrl: '/BITS _ Hackathon.pdf'
+  },
+  {
+    id: 'frt-dev',
+    title: 'FullStack Developer Internship Certificate',
+    issuer: 'AICTE',
+    issueDate: '03 Aug 2023',
+    image: '/frt.png',
+    downloadUrl: '/SAGAR_Certificate.pdf'
+  }
+];
+
+export { techSlugs, mernProjects, deepLearningProjects, experienceData };

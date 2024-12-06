@@ -18,8 +18,8 @@ const PythonIcon = ({ size = 20 }: { size?: number }) => {
         y2="26.277"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#26abe7"></stop>
-        <stop offset="1" stop-color="#086dbf"></stop>
+        <stop offset="0" stopColor="#26abe7"></stop>
+        <stop offset="1" stopColor="#086dbf"></stop>
       </linearGradient>
       <path
         fill="url(#goqfu1ZNmEnUrQDJEQ1bUa_l75OEUJkPAk4_gr1)"
@@ -33,8 +33,8 @@ const PythonIcon = ({ size = 20 }: { size?: number }) => {
         y2="21.034"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#feb705"></stop>
-        <stop offset="1" stop-color="#ffda1c"></stop>
+        <stop offset="0" stopColor="#feb705"></stop>
+        <stop offset="1" stopColor="#ffda1c"></stop>
       </linearGradient>
       <path
         fill="url(#goqfu1ZNmEnUrQDJEQ1bUb_l75OEUJkPAk4_gr2)"
@@ -66,8 +66,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="23.549"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ff8100"></stop>
-        <stop offset="1" stop-color="#ff8100"></stop>
+        <stop offset="0" stopColor="#ff8100"></stop>
+        <stop offset="1" stopColor="#ff8100"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVa_sop9ROXku5bb_gr1)"
@@ -81,10 +81,10 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="40.313"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ffd21e"></stop>
-        <stop offset=".364" stop-color="#feca17"></stop>
-        <stop offset=".941" stop-color="#fbb302"></stop>
-        <stop offset="1" stop-color="#fbb000"></stop>
+        <stop offset="0" stopColor="#ffd21e"></stop>
+        <stop offset=".364" stopColor="#feca17"></stop>
+        <stop offset=".941" stopColor="#fbb302"></stop>
+        <stop offset="1" stopColor="#fbb000"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVb_sop9ROXku5bb_gr2)"
@@ -98,10 +98,10 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="34.897"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ffd21e"></stop>
-        <stop offset=".364" stop-color="#feca17"></stop>
-        <stop offset=".941" stop-color="#fbb302"></stop>
-        <stop offset="1" stop-color="#fbb000"></stop>
+        <stop offset="0" stopColor="#ffd21e"></stop>
+        <stop offset=".364" stopColor="#feca17"></stop>
+        <stop offset=".941" stopColor="#fbb302"></stop>
+        <stop offset="1" stopColor="#fbb000"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVc_sop9ROXku5bb_gr3)"
@@ -115,8 +115,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="34.962"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ff8100"></stop>
-        <stop offset="1" stop-color="#ff8100"></stop>
+        <stop offset="0" stopColor="#ff8100"></stop>
+        <stop offset="1" stopColor="#ff8100"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVd_sop9ROXku5bb_gr4)"
@@ -130,10 +130,10 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="34.897"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ffd21e"></stop>
-        <stop offset=".364" stop-color="#feca17"></stop>
-        <stop offset=".941" stop-color="#fbb302"></stop>
-        <stop offset="1" stop-color="#fbb000"></stop>
+        <stop offset="0" stopColor="#ffd21e"></stop>
+        <stop offset=".364" stopColor="#feca17"></stop>
+        <stop offset=".941" stopColor="#fbb302"></stop>
+        <stop offset="1" stopColor="#fbb000"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVe_sop9ROXku5bb_gr5)"
@@ -147,8 +147,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="34.962"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ff8100"></stop>
-        <stop offset="1" stop-color="#ff8100"></stop>
+        <stop offset="0" stopColor="#ff8100"></stop>
+        <stop offset="1" stopColor="#ff8100"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVf_sop9ROXku5bb_gr6)"
@@ -162,8 +162,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="26.353"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#41474a"></stop>
-        <stop offset="1" stop-color="#323538"></stop>
+        <stop offset="0" stopColor="#41474a"></stop>
+        <stop offset="1" stopColor="#323538"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVg_sop9ROXku5bb_gr7)"
@@ -177,8 +177,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="28.782"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f52537"></stop>
-        <stop offset="1" stop-color="#c8202c"></stop>
+        <stop offset="0" stopColor="#f52537"></stop>
+        <stop offset="1" stopColor="#c8202c"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVh_sop9ROXku5bb_gr8)"
@@ -192,8 +192,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="19.739"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ff8100"></stop>
-        <stop offset="1" stop-color="#ff8100"></stop>
+        <stop offset="0" stopColor="#ff8100"></stop>
+        <stop offset="1" stopColor="#ff8100"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVi_sop9ROXku5bb_gr9)"
@@ -207,8 +207,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="19.739"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#ff8100"></stop>
-        <stop offset="1" stop-color="#ff8100"></stop>
+        <stop offset="0" stopColor="#ff8100"></stop>
+        <stop offset="1" stopColor="#ff8100"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVj_sop9ROXku5bb_gr10)"
@@ -222,8 +222,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="18.015"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#41474a"></stop>
-        <stop offset="1" stop-color="#323538"></stop>
+        <stop offset="0" stopColor="#41474a"></stop>
+        <stop offset="1" stopColor="#323538"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVk_sop9ROXku5bb_gr11)"
@@ -237,8 +237,8 @@ const HuggingFaceIcon = ({ size = 20}: { size?: number }) => {
         y2="18.015"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#41474a"></stop>
-        <stop offset="1" stop-color="#323538"></stop>
+        <stop offset="0" stopColor="#41474a"></stop>
+        <stop offset="1" stopColor="#323538"></stop>
       </linearGradient>
       <path
         fill="url(#G0Jpwzc9gkuJdD7CvJwJVl_sop9ROXku5bb_gr12)"
