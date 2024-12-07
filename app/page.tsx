@@ -9,9 +9,9 @@ import Education from "./components/Education";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import SparklingBackground from "@/components/SparklingBackground";
-import Image from "next/image"; // Import for handling images
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for hamburger menu
-import { Button } from "@/components/ui/button"; // Resume button styling
+import Image from "next/image";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 import Footer from "./components/Footer";
 
 export default function Page() {
@@ -20,7 +20,7 @@ export default function Page() {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    setMenuOpen(false); // Close dropdown on tab selection
+    setMenuOpen(false);
   };
 
   return (
@@ -32,23 +32,24 @@ export default function Page() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-between items-center mb-8"
+          className="flex items-center justify-between mb-8 gap-4"
         >
           {/* Developer Info Section */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
             <Image
               src="/sagarImg.jpeg"
               alt="Developer Image"
               width={40}
               height={40}
-              className="rounded-full mr-4"
+              className="rounded-full"
             />
-            <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-red-800">
+            {/* Hide name on small screens */}
+            <h1 className="hidden md:block text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-red-800">
               👋 I&apos;m Sagar Puniyani
             </h1>
           </div>
 
-          {/* Buttons */}
+          {/* Buttons Section */}
           <div className="flex items-center gap-4">
             {/* GitHub Button */}
             <motion.a
@@ -68,22 +69,20 @@ export default function Page() {
               >
                 <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-1.8c-3.3.7-4-1.6-4-1.6-.5-1.2-1.3-1.5-1.3-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 2 .7 2.6.1.1-.7.4-1.1.7-1.3-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.3-3.2-.2-.3-.6-1.7.1-3.4 0 0 1-.3 3.4 1.3a12 12 0 0 1 6.2 0c2.3-1.6 3.4-1.3 3.4-1.3.7 1.7.3 3.1.1 3.4.8.8 1.3 1.9 1.3 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8.9.8 1.8v2.7c0 .3.2.6.8.5A12 12 0 0 0 12 0z" />
               </svg>
-              <span className="text-xl font-bold">GitHub</span>
+              <span className="text-base font-bold">GitHub</span>
             </motion.a>
 
             {/* Resume Download Button */}
             <Button variant="premium" asChild>
-              <a href="/resume.pdf" download>
+              <a href="/sagar_resume.pdf" download>
                 Download Resume
               </a>
             </Button>
-          </div>
 
-          {/* Hamburger for Mobile Screens */}
-          <div className="block md:hidden">
+            {/* Hamburger for Mobile Screens */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl focus:outline-none"
+              className="text-2xl md:hidden focus:outline-none"
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -158,7 +157,7 @@ export default function Page() {
       </div>
 
       {/* Footer Component */}
-      <div className="absolute bottom-0 w-full z-10  pt-6">
+      <div className="absolute bottom-0 w-full z-10 pt-6">
         <Footer />
       </div>
     </div>
