@@ -34,8 +34,8 @@ const Home = () => {
           that make a difference.
         </p>
         <ul className="text-sm md:text-base space-y-1">
-          <li>⚡ MERN Stack Development</li>
-          <li>⚡ Deep Learning and Data Science</li>
+          <li>⚡ MERN Stack Development </li>
+          <li>⚡ AI/ML: Deep Learning and Data Science</li>
           <li>⚡ Cloud Platforms: AWS, Azure, Vercel, etc</li>
           <li>⚡ DevOps and Containerization: Docker, Redis</li>
         </ul>
@@ -43,8 +43,8 @@ const Home = () => {
           Do visit Project Section. 🧐
         </div>
 
-       {/* Social Links Section */}
-       <div className="flex flex-wrap justify-center md:justify-start space-x-4">
+        {/* Social Links Section */}
+        {/* <div className="flex flex-wrap space-x-4 space-y-5 justify-center md:justify-start gap-4 mt-4 md:mt-6 sm:gap-6">
           <a
             href="https://linkedin.com/in/sagar-puniyani"
             target="_blank"
@@ -74,7 +74,54 @@ const Home = () => {
           </a>
           <a
             href="mailto:sagarpuniyani@gmail.com"
-            onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=sagarpuniyani@gmail.com', '_blank')}
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=sagarpuniyani@gmail.com",
+                "_blank"
+              )
+            }
+            className="flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaEnvelope size={20} />
+            <span>Gmail</span>
+          </a>
+        </div> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4 md:mt-6">
+          <a
+            href="https://linkedin.com/in/sagar-puniyani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaLinkedin size={20} />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://twitter.com/sagarpuniyani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-blue-400 hover:bg-blue-500 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaTwitter size={20} />
+            <span>Twitter</span>
+          </a>
+          <a
+            href="https://github.com/sagar-puniyani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
+          >
+            <FaGithub size={20} />
+            <span>GitHub</span>
+          </a>
+          <a
+            href="mailto:sagarpuniyani@gmail.com"
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=sagarpuniyani@gmail.com",
+                "_blank"
+              )
+            }
             className="flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-lg font-medium transition-all duration-200 space-x-2"
           >
             <FaEnvelope size={20} />
