@@ -115,7 +115,7 @@ const Home = () => {
             <span>GitHub</span>
           </a>
           <a
-            href="mailto:sagarpuniyani@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sagarpuniyani@gmail.com"
             onClick={() =>
               window.open(
                 "https://mail.google.com/mail/?view=cm&fs=1&to=sagarpuniyani@gmail.com",

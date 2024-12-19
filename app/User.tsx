@@ -199,6 +199,14 @@ export const certificates: Certificate[] = [
     downloadUrl: '/Mern_certificate.pdf'
   },
   {
+    id: 'ybi-data-science',
+    title: 'Data Science Internship Certificate',
+    issuer: 'Ybi Foundation Pvt. Ltd.',
+    issueDate: 'July 2024 - Nov 2024',
+    image: '/ybi_internship.png',
+    downloadUrl: '/ybi_certificate.pdf'
+  },
+  {
     id: 'bits-hackathon',
     title: 'BITS Pilani Postman API Hackathon 3.0',
     issuer: 'BITS Pilani Postman API and Coding Innovation Lab',
